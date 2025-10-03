@@ -4,6 +4,8 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    color: #A275DF;
+    font-weight: bold;
 }
 
 .home-background {
@@ -22,15 +24,15 @@ body {
     flex-direction: column;
 }
 
-.home-background::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background: #2e2e88ff;
-    opacity: 0.8;
-    z-index: 1;
-    pointer-events: none;
-}
+    .home-background::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background: #241E66;
+        opacity: 0.85;
+        z-index: 1;
+        pointer-events: none;
+    }
 
 .home-background > * {
     position: relative;
@@ -92,4 +94,23 @@ hr + footer {
     background-color: #dee2e6;
     opacity: 1;
     margin: 0;
+}
+
+.font-title-2 {
+    font-size: 1.75rem;
+    font-family: var(--title-font-family);
+    font-weight: 700;
+    font-style: normal;
+    line-height: 2.5rem;
+    text-decoration: none;
+    text-transform: none;
+    color: #AC69D9
+}
+
+.font-increase-size {
+    font-size: 24px;
+}
+
+.font-color-change {
+    color: steelblue;
 }
