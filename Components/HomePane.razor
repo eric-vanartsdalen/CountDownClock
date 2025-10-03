@@ -1,0 +1,29 @@
+@inject IJSRuntime JS
+
+<div class="p-4 bg-light rounded shadow-sm">
+	<div>
+		<br/>
+		<div> 
+			<!-- 
+				Functions in the wwwroot/js/clock-functions.js update
+				the DOM elements which have the IDs "state" and "countdown"
+			-->
+			<br /><br /><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;<span class="font-increase-size font-color-change" id="state"></span>
+			<br /><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;<span class="font-increase-size" id="countdown"></span>
+		</div>
+	</div>
+	<br />
+</div>
+
+@code {
+	protected override async Task OnAfterRenderAsync(bool firstRender)
+	{
+		if (firstRender)
+		{
+			await JS.InvokeVoidAsync("countdown");
+		}
+	}
+}
+
